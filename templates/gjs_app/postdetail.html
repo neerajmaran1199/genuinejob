@@ -1,0 +1,31 @@
+
+{% extends 'index.html'%}
+
+
+{% block content %}
+
+<p style:Cfont-size=small"><b>Company name :</b> &nbsp; &nbsp;  {{object.company_name}}</p>
+<!-- <p>Company website :          <a href = '{{object.website}}' target="_blank">{{object.website}}</a> -->
+<p><b>Job title : </b>&nbsp; &nbsp;               {{object.job_title}}</p>
+<p><b>Location  :  </b>    &nbsp; &nbsp;          {{object.job_location}}</p>
+<p> <b>Qualification :</b> &nbsp; &nbsp;            {{object.qualification}}</p>
+<p>  <b>monthly Salary :</b> &nbsp; &nbsp;                 {{object.monthly_salary}}</p> 
+ 
+<!-- <p>Eligibility criteria :     {{object.monthly_salary}}  </p> -->
+<p><b>Hiring Process : </b>  &nbsp; &nbsp;           {{object.hiring_process}}</p>
+<p><b>comapany website :</b>&nbsp; &nbsp;          <a href="">{{object.company_website}}</a></p>
+<p>    <b>Last date : </b>&nbsp; &nbsp;            {{object.last_date}} </p>
+<p> <b>Job description:</b>&nbsp; &nbsp;          {{object.job_description|safe}} </p>
+
+<p>          {{object.work_from}} </p>
+<p> <u><b>About Company :&nbsp; &nbsp;</b> </u> <br><br>         {{object.about_company}} </p>
+
+
+<div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="{{object.apply_link}}">click here to Apply</a></div>
+{% endblock %}
+
+
+
+
+
+

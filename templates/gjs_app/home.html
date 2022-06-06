@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% block content %}
+
+            <!-- Post preview-->
+            {% for post in posts %}
+            <div class="post-preview">
+                <a href="{% url 'post-detail' post.id %}">
+                    
+                   
+                    <h5 class="post-title">{{post.company_name}}</h5>
+                    <h6 class="post-subtitle">job title : {{post.job_title}}</h6>
+                    <h6 class="post-subtitle">qualification : {{post.qualification}}</h6>
+                    <h6 class="post-subtitle">Job Location : {{post.job_location}}</h6>
+                    <h6 class="post-subtitle">Last Date : {{post.last_date}}</h6>
+                    <h6 class="post-subtitle" style='overflow:hidden'>Job Description :<br> {{post.job_description| safe|truncatechars:520}}</h6>
+                    
+                    
+                    <!-- <h4 class="post-subtitle">{{post.experience}}</h4>
+                     <h4 class="post-subtitle">{{post.companyprofile}}</h4>
+                    <h4 class="post-subtitle">{{post.jobdescription}}</h4>
+                    <h4 class="post-subtitle">{{post.qualification}}</h4>
+                    <h4 class="post-subtitle">{{post.requiredskills}}</h4> -->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="{% url 'post-detail' post.id %}">more details</a></div>
+                
+                    <hr class="my-4" />
+
+                
+                    {% endfor %}
+                </a>    
+                
+                
+               
+            </div>
+            <!-- Divider-->
+            
+            <!-- Post preview-->
+            
+            
+           
+           
+            <!-- Pager-->
+          
+{% endblock %}
